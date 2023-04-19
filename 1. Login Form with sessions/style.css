@@ -25,23 +25,35 @@ p{
     color:#bdbdbd;
     font-family: 'Lato';
     text-align: center;
-    padding-bottom: 1.5rem;
+    font-size: 1.25rem;
+    padding-bottom: 1.25rem;
 }
 label{
     padding-bottom: 1rem;
 }   
 input{
+    font-family: 'Lato';
     color: #fafafa;
     width: 300px;
     font-size: 1rem;
-    padding: 1rem;
+    padding: .75rem;
     border:1px solid #fafafa;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
     outline: none;
     background: transparent;
+    margin-bottom: 1rem;
 }
 label{
     
     font-size: 1.25rem;
     font-family: 'Lato';
+}
+.button{
+    margin: auto;
+    font-size: larger;
+   margin-top:2.5rem;
+   border-radius: 0.5rem;
+   background-color: rgba(106, 17, 203, 1);
+   border: none;
+  
 }
