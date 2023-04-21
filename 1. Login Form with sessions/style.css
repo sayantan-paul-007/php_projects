@@ -44,14 +44,13 @@ input{
     margin-bottom: 1rem;
 }
 label{
-    
     font-size: 1.25rem;
     font-family: 'Lato';
 }
 .button{
     margin: auto;
     font-size: larger;
-   margin-top:2.5rem;
+   margin-top:2rem;
    border-radius: 0.5rem;
    background-color: rgba(106, 17, 203, 1);
    border: none;
