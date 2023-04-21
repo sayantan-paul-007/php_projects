@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,8 +55,8 @@
             <th colspan="2">Pecentage: 98%</th>
         </tr>
     </table>
-<a href=""><button type="submit"  class="button">View another result</button></a>
     </div>
+    <button type="submit"  class="button"><a class="link" href="index.php"> View another result</a></button>
    </section>
 </body>
 </html>

@@ -1,0 +1,4 @@
+PDO main classes
+1. PDO -> for connecting PHP to DB
+2. PDOStatement -> a statement formed after the query is executed
+3. PDOException -> used for raising an exception error
