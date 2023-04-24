@@ -1,13 +1,7 @@
 <?php 
-    $roll= $rollErr='';
+    include("config/connection.php");
+    $roll=$rollErr='';
     if(isset($_POST['submit'])){
-        if(empty($_POST['rollno'])){
-            $rollErr = '&#9888 Please enter valid roll number';
-        }
-        else{
-            $roll = filter_input(INPUT_POST,'rollno',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-            header('Location: report.php');
-        }
         
     }    
 ?>
@@ -21,7 +15,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="report.php" method="post">
         <h1>Exam Results</h1>
         <p>Enter your roll number to view results</p>
         <label for="rollno">

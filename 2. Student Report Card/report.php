@@ -1,3 +1,11 @@
+<?php 
+    include("config/connection.php");
+    $rollno = $_POST['rollno'];
+    $sql = 'SELECT * FROM marks_record WHERE roll_no = '.$rollno;
+    $statement = $pdo->prepare($sql);
+    $statement->execute();
+    
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +19,15 @@
 <body>
    <section>
     <h1>Exam results</h1>
+    <?php 
+        if($statement->rowCount()>0){
+            $roll_no = $statement->fetch();
+    ?>
     <div class="info-grp">
         <p>Name:</p>
-        <p class="value">Sayantan Paul</p>
+        <p class="value"><?php echo $roll_no['name'] ?> </p>
         <p>Roll No:</p>
-        <p class="value">1222</p>
+        <p class="value"><?php echo $roll_no['roll_no'] ?></p>
     </div>
     <div class="table">
     <table border="1">
@@ -25,38 +37,51 @@
         </tr>
         <tr>
             <td class="subjects">English</td>
-            <td>21</td>
+            <td><?php echo $roll_no['eng'] ?></td>
         </tr>
         <tr>
             <td class="subjects">Hindi</td>
-            <td>21</td>
+            <td><?php echo $roll_no['hin'] ?></td>
         </tr>
         <tr>
             <td class="subjects">Marathi</td>
-            <td>21</td>
+            <td><?php echo $roll_no['mar'] ?></td>
         </tr>
         <tr>
             <td class="subjects">Maths</td>
-            <td>21</td>
+            <td><?php echo $roll_no['maths'] ?></td>
         </tr>
         <tr>
             <td class="subjects">Science</td>
-            <td>21</td>
+            <td><?php echo $roll_no['sci'] ?></td>
         </tr>
         <tr>
             <td class="subjects">Social Science</td>
-            <td>21</td>
+            <td><?php echo $roll_no['ss'] ?></td>
         </tr>
         <tr>
             <th class="total">Total</th>
-            <th>85</th>
+            <th><?php echo $roll_no['total'] ?></th>
         </tr>
         <tr>
-            <th colspan="2">Pecentage: 98%</th>
+            <th colspan="2">Pecentage: <?php echo $roll_no['percent'] ?></th>
         </tr>
     </table>
     </div>
-    <button type="submit"  class="button"><a class="link" href="index.php"> View another result</a></button>
+    
+    <?php
+    }else{
+        $countsql = 'SELECT * FROM marks_record';
+        $countstate = $pdo->prepare($countsql);
+        $countstate->execute();
+        echo "<p>No Such Student found try using Numbers 1 to ".$countstate->rowCount() ."</p>";
+        
+    }
+    
+?>
+<button type="submit"  class="button"><a class="link" href="index.php"> View another result</a></button>
    </section>
+
 </body>
 </html>
+
