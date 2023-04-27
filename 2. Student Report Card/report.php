@@ -4,7 +4,7 @@
     $sql = 'SELECT * FROM marks_record WHERE roll_no = '.$rollno;
     $statement = $pdo->prepare($sql);
     $statement->execute();
-    
+    //JS = object.value PHP Object->value =>
 ?>
 
 <!DOCTYPE html>
