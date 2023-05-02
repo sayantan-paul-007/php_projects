@@ -1,0 +1,55 @@
+The folder structure of the project
+2 categories: Admin and Employee
+Authorities: Admin: edit, update, delete and add all employees and also has access to employee list
+
+Employee: edit, update and add their own records only doesn't have access to employee list, they can add their details only once and edit accordingly
+
+admin/index.php(this is the first page that will appear on /admin url) (i.e. admin login page)
+
+Folder Tree
+
++ = Main folder
+- = Sub folder
+/ - files
+
+3. Employee Record Management System
+    +Admin 
+        +frontend
+            -htmls
+            -css
+            -assets
+            -js
+        +includes
+            /header.php
+            /footer.php
+            /db.php
+            /sidebar.php
+    /index.php 
+    /admin_dashboard.php
+    /emp_list.php
+    /edit_profile.php
+    /edit_emp_edu.php
+    /edit_emp_exp.php
+    /edit_emp_prof.php
+    /logout.php
+    +Employee 
+        +frontend
+            -htmls
+            -css
+            -assets
+            -js
+        +includes
+            /header.php
+            /footer.php
+            /db.php
+            /sidebar.php
+    /index.php 
+    /login.php
+    /signup.php
+    /emp_dashboard.php
+    /edit_profile.php
+    /add_edu.php
+    /edit_edu.php
+    /add_exp.php
+    /edit_exp.php
+    /logout.php
