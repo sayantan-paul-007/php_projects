@@ -53,3 +53,32 @@ Folder Tree
     /add_exp.php
     /edit_exp.php
     /logout.php
+
+
+    File roles 
+    employee/index.php - First page to open when opening the main directory where there will be option to opt for user login, user sign up or admin login
+********************************************USER ROLES*********************************************************
+    When user clicks on User Signup----------
+    employee/signup.php - sign up page
+    employee/login.php - login page
+    employee/emp_dashboard.php - opens up employee dashboard 
+    employee/add_exp.php - opens up employee experience (can put experience only once and edit many times) 
+    employee/edit_exp.php - opens up edit employee experience 
+    employee/add_edu.php - opens up employee education (can put experience only once and edit many times) 
+    employee/edit_edu.php - opens up edit employee education 
+
+    Profile options------
+    employee/edit_profile.php - opens up edit profile
+    employee/logout.php - logs out
+********************************************ADMIN ROLES********************************************************
+    When user clicks on Admin Login 
+    admin/index.php - login page of admin (there will be no signup page for admin as the admin is unique)
+    admin/admin_dashboard.php - opens up admin dashboard 
+    admin/emp_list.php - opens up all employees list 
+    admin/edit_emp_edu.php - provides an option to edit the education of employee (This option will be attached along with the individual record)
+    admin/edit_emp_exp.php - provides an option to edit the experience of employee (This option will be attached along with the individual record)
+    admin/edit_emp_prof.php - provides an option to edit the profile of employee (This option will be attached along with the individual record)
+      
+    Profile options------
+    employee/edit_profile.php - opens up edit profile
+    employee/logout.php - logs out
